@@ -1,0 +1,19 @@
+import {
+    FETCH_CAT_ERROR,
+    FETCH_CAT_REQUEST,
+    FETCH_CAT_SUCCESS
+} from './cat'
+import{
+    FETCH_DOG_ERROR,
+    FETCH_DOG_REQUEST,
+    FETCH_DOG_SUCCESS
+} from './dog'
+
+export {
+    FETCH_CAT_ERROR, 
+    FETCH_CAT_REQUEST, 
+    FETCH_CAT_SUCCESS, 
+    FETCH_DOG_ERROR, 
+    FETCH_DOG_REQUEST, 
+    FETCH_DOG_SUCCESS
+}
