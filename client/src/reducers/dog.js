@@ -25,7 +25,8 @@ export const dogReducer = (state=initialState, action) => {
         sex: action.dogToAdopt.sex,
         age: action.dogToAdopt.age,
         breed: action.dogToAdopt.breed,
-        story: action.dogToAdopt.story
+        story: action.dogToAdopt.story,
+        class:'dog'
       },
       error: false,
       loading: false

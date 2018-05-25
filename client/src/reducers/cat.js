@@ -25,7 +25,8 @@ export const catReducer = (state=initialState, action) => {
         sex: action.catToAdopt.sex,
         age: action.catToAdopt.age,
         breed: action.catToAdopt.breed,
-        story: action.catToAdopt.story
+        story: action.catToAdopt.story,
+        class:'cat'
       },
       error: null,
       loading: false

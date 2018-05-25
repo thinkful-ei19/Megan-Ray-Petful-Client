@@ -1,6 +1,9 @@
 import React from 'react';
+import {deleteDog, deleteCat} from '../actions/index'
+import {connect} from 'react-redux'
 
-export default function Pet(props){
+
+export function Pet(props){
     return(
         <div className={props.pet.class}>
                 <header>
@@ -19,9 +22,24 @@ export default function Pet(props){
                         <dd>{props.pet.story}</dd>
                     </dl> 
                  </main>
-                <button type='submit' onClick={props.onAdoptPet}>Adopt</button>
+                <button type='submit' onClick={
+                    ()=> {
+                        console.log('delete called')
+                        console.log(props.pet)
+                        if(props.pet.class==='cat'){
+                            console.log('cat delete');
+                            props.dispatch(deleteCat());
+                        }
+                        if(props.pet.class==='dog'){
+                            console.log('dog delete')
+                            props.dispatch(deleteDog())
+                        }
+                    }
+                }>
+                Adopt</button>
             </div>
     )
 }
 
 
+export default connect()(Pet)

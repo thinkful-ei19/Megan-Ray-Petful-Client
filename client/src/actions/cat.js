@@ -34,7 +34,7 @@ export const fetchCat =()=>(dispatch, getState)=>{
 export const deleteCat =()=>(dispatch, getState)=>{
     fetch(`${API_BASE_URL}/api/cat`, {
         method: 'DELETE'})
-        .then(recipes=> dispatch(fetchCat()))
+        .then(()=>dispatch(fetchCat()))
         .catch(err=> {
             console.log(err);
         })

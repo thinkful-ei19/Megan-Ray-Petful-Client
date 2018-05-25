@@ -1,7 +1,7 @@
 import React from 'react';
 import Pet from './components/Pet'
 import './Dashboard.css';
-import {fetchCat, fetchDog} from './actions/index'
+import {fetchCat, fetchDog, deleteDog, deleteCat} from './actions/index'
 import {connect} from 'react-redux'
 
 
@@ -12,15 +12,23 @@ export class Dashboard extends React.Component{
       this.props.dispatch(fetchDog());
 
   }
-    onAdoptPet() {
-      console.log('Adopted!');
+    onAdoptPet(type) {
+      console.log('delete called')
+      if(type==='cat'){
+        console.log('cat delete');
+        this.props.dispatch(deleteCat());
+      }
+      if(type==='dog'){
+        console.log('dog delete')
+        this.props.dispatch(deleteDog())
+      }
     };
 
     render() {
         return (
           <div className="App">
-            <Pet pet={this.props.catToAdopt} onAdoptPet={this.onAdoptPet()}/>
-            <Pet pet={this.props.dogToAdopt} onAdoptPet={this.onAdoptPet()}/>
+            <Pet pet={this.props.catToAdopt} />
+            <Pet pet={this.props.dogToAdopt} />
           </div>
         );
       }
@@ -28,7 +36,7 @@ export class Dashboard extends React.Component{
 
 const mapStateToProps = state => ({
   catToAdopt: state.cat.catToAdopt,
-  dogToAdopt: state.dog.dogToAdopt
+  dogToAdopt: state.dog.dogToAdopt,
 });
 
 export default connect(mapStateToProps)(Dashboard);

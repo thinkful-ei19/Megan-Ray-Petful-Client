@@ -19,11 +19,11 @@ export const fetchDogError=(error)=>({
 
 export const fetchDog =()=>(dispatch, getState)=>{
     dispatch(fetchDogRequest)
-    fetch(`${API_BASE_URL}/api/cat`)
+    fetch(`${API_BASE_URL}/api/dog`)
         .then(res => 
             res.json()
         )
-        .then(cat=>dispatch(fetchDogSuccess(cat)))
+        .then(dog=>dispatch(fetchDogSuccess(dog)))
         .catch(err=> {
             console.log(err);
             dispatch(fetchDogError);
@@ -32,9 +32,9 @@ export const fetchDog =()=>(dispatch, getState)=>{
 }
 
 export const deleteDog =()=>(dispatch, getState)=>{
-    fetch(`${API_BASE_URL}/api/cat`, {
+    fetch(`${API_BASE_URL}/api/dog`, {
         method: 'DELETE'})
-        .then(recipes=> dispatch(fetchDog()))
+        .then(()=>dispatch(fetchDog()))
         .catch(err=> {
             console.log(err);
         })
