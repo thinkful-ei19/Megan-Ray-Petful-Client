@@ -6,9 +6,9 @@ export const fetchCatRequest=()=>({
 });
 
 export const FETCH_CAT_SUCCESS='FETCH_CAT_SUCCESS'
-export const fetchCatSuccess=(catObj)=>({
+export const fetchCatSuccess=(catToAdopt)=>({
     type:FETCH_CAT_SUCCESS,
-    catObj
+    catToAdopt
 });
 
 export const FETCH_CAT_ERROR='FETCH_CAT_ERROR'
