@@ -30,11 +30,15 @@ export default class Dashboard extends React.Component{
         }
       }
 
+    onAdoptPet() {
+      console.log('Adopted!');
+    };
+
     render() {
         return (
           <div className="App">
-            <Pet pet={this.state.catToAdopt}/>
-            <Pet pet={this.state.dogToAdopt}/>
+            <Pet pet={this.state.catToAdopt} onAdoptPet={this.onAdoptPet()}/>
+            <Pet pet={this.state.dogToAdopt} onAdoptPet={this.onAdoptPet()}/>
           </div>
         );
       }
