@@ -1,4 +1,4 @@
-import {FETCH_CAT_SUCCESS, FETCH_CAT_ERROR} from '../index';
+import {FETCH_CAT_SUCCESS, FETCH_CAT_ERROR} from '../actions/index';
 
 const initialState = {
   catToAdopt: {
@@ -19,11 +19,11 @@ export const catReducer = (state=initialState, action) => {
     return Object.assign({}, state, {
       catToAdopt: {
         imageURL: action.catToAdopt.imageURL,
-        imageDescription: aciton.catToAdopt.imageDescription,
+        imageDescription: action.catToAdopt.imageDescription,
         name: action.catToAdopt.name,
         sex: action.catToAdopt.sex,
-        age: aciton.catToAdopt.age,
-        breed: aciton.catToAdopt.breed,
+        age: action.catToAdopt.age,
+        breed: action.catToAdopt.breed,
         story: action.catToAdopt.story
       },
       error: null,

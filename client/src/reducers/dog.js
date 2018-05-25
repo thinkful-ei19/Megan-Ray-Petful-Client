@@ -1,4 +1,4 @@
-import {FETCH_DOG_SUCCESS, FETCH_DOG_ERROR} from '../index';
+import {FETCH_DOG_SUCCESS, FETCH_DOG_ERROR} from '../actions/index';
 
 const initialState = {
   dogToAdopt: {
@@ -19,11 +19,11 @@ export const dogReducer = (state=initialState, action) => {
     return Object.assign({}, state, {
       dogToAdopt: {
         imageURL: action.dogToAdopt.imageURL,
-        imageDescription: aciton.dogToAdopt.imageDescription,
+        imageDescription: action.dogToAdopt.imageDescription,
         name: action.dogToAdopt.name,
         sex: action.dogToAdopt.sex,
-        age: aciton.dogToAdopt.age,
-        breed: aciton.dogToAdopt.breed,
+        age: action.dogToAdopt.age,
+        breed: action.dogToAdopt.breed,
         story: action.dogToAdopt.story
       },
       error: false,
