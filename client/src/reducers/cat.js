@@ -8,7 +8,8 @@ const initialState = {
     sex: '',
     breed: '',
     story: '',
-    img: ''
+    img: '',
+    description:''
   },
   error: null,
   loading: false
@@ -18,8 +19,8 @@ export const catReducer = (state=initialState, action) => {
   if(action.type === FETCH_CAT_SUCCESS) {
     return Object.assign({}, state, {
       catToAdopt: {
-        imageURL: action.catToAdopt.imageURL,
-        imageDescription: action.catToAdopt.imageDescription,
+        img: action.catToAdopt.imageURL,
+        description: action.catToAdopt.imageDescription,
         name: action.catToAdopt.name,
         sex: action.catToAdopt.sex,
         age: action.catToAdopt.age,

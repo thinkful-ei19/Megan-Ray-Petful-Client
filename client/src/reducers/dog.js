@@ -8,7 +8,8 @@ const initialState = {
     sex: '',
     breed: '',
     story: '',
-    img: ''
+    img: '',
+    description:''
   },
   error: false,
   loading: false
@@ -18,8 +19,8 @@ export const dogReducer = (state=initialState, action) => {
   if(action.type === FETCH_DOG_SUCCESS) {
     return Object.assign({}, state, {
       dogToAdopt: {
-        imageURL: action.dogToAdopt.imageURL,
-        imageDescription: action.dogToAdopt.imageDescription,
+        img: action.dogToAdopt.imageURL,
+        description: action.dogToAdopt.imageDescription,
         name: action.dogToAdopt.name,
         sex: action.dogToAdopt.sex,
         age: action.dogToAdopt.age,

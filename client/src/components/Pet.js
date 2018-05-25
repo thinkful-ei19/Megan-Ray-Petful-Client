@@ -4,7 +4,7 @@ export default function Pet(props){
     return(
         <div className={props.pet.class}>
                 <header>
-                    <img alt={props.pet.name} src={props.pet.img}/>
+                    <img alt={props.pet.description} src={props.pet.img}/>
                     <h2>More About {props.pet.name}</h2>
                 </header>
                 <main>
