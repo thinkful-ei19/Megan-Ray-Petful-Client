@@ -5,7 +5,7 @@ A React app made with Redux to showcase adoptable dogs and cats.  People are onl
 ##Deployed Version: 
 [Petful Deployed](http://dazzling-kirch-250b9b.netlify.com/)
 
-##FrontEnd:
+##BackEnd:
 [Petful Backend](https://github.com/thinkful-ei19/Megan-Ray-Petful-Server)
 
 
